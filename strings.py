@@ -1,1 +1,2 @@
-print("Hello world!\nWtf is going on")
+print("Hello world!\nWtf is \ngoing on")
+print("Heloo " + "Mutuaa")
