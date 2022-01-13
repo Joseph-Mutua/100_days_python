@@ -44,14 +44,24 @@
 # print("your BMI index is: " + str(bmi_index))
 
 # Number manipulation and F strings
-print(round(8 / 3, 6))
+# print(round(8 / 3, 6))
 
-# Floor
-print(8 // 3)
+# # Floor
+# print(8 // 3)
 
-result = 4 / 2
-result /= 2
-print(result)
+# result = 4 / 2
+# result /= 2
+# print(result)
 
-# F strings
-print(f"Your score is {result}")
+# # F strings
+# print(f"Your score is {result}")
+
+current_age = int(input("What's your current age?\n"))
+
+years_to_90 = 90 - current_age
+
+days_left = int(years_to_90 * 365)
+weeks_left = int(years_to_90 * 52)
+months_left = int(years_to_90 * 12)
+
+print(f"You have {days_left} days, {weeks_left} weeks and {months_left} months left to live to 90 years")
