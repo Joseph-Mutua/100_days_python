@@ -57,36 +57,68 @@
 #     print("that's not a leap year")
 
 
-pizza_order = input(
-    "Please input your pizza order. Type s for small, m for medium and l for large pizza\n")
-extra_pep = input("Do you want pepperoni? Type y or n\n")
-total_bill = 0
+# pizza_order = input(
+#     "Please input your pizza order. Type s for small, m for medium and l for large pizza\n")
+# extra_pep = input("Do you want pepperoni? Type y or n\n")
+# total_bill = 0
 
-extra_cheese = input("Do you need extra cheese? Type y or n\n")
+# extra_cheese = input("Do you need extra cheese? Type y or n\n")
 
-if extra_cheese == "y":
-    total_bill += 1
+# if extra_cheese == "y":
+#     total_bill += 1
+# else:
+#     total_bill += 0
+
+
+# if pizza_order == "s":
+#     total_bill += 15
+#     if extra_pep == "y":
+#         print(f"Your total bill is ${total_bill + 2} dollars")
+#     else:
+#         print(f"Your total bill is {total_bill} dollars")
+# elif pizza_order == "m":
+#     total_bill += 20
+#     if extra_pep == "y":
+#         print(f"Your total bill is ${total_bill + 3} dollars")
+#     else:
+#         print(f"Your total bill is {total_bill} dollars")
+# elif pizza_order == "l":
+#     total_bill += 25
+#     if extra_pep == "y":
+#         print(f"Your total bill is ${total_bill + 3} dollars")
+#     else:
+#         print(f"Your total bill is {total_bill} dollars")
+# else:
+#     print("You need to make an order please")
+
+print("Welcome to the love calculator\n")
+name1 = input("Wha's your name? \n")
+name2 = input("what's their name?\n")
+
+combined_string = name1 + name2
+
+lower_case_string = combined_string.lower()
+
+t = lower_case_string.count("t")
+r = lower_case_string.count("r")
+u = lower_case_string.count("u")
+e = lower_case_string.count("e")
+
+true = t+r+u+e
+
+l = lower_case_string.count("l")
+o = lower_case_string.count("o")
+v = lower_case_string.count("v")
+e = lower_case_string.count("e")
+
+love = l+o+v+e
+
+love_score = int(str(true) + str(love))
+
+if (love_score < 10) or (love_score > 90):
+    print(
+        f"Your love score is {love_score}. You go together like coke or metos")
+elif (40 <= love_score >= 50):
+    print(f"Your score is {love_score}, you are alright together")
 else:
-    total_bill += 0
-
-
-if pizza_order == "s":
-    total_bill += 15
-    if extra_pep == "y":
-        print(f"Your total bill is ${total_bill + 2} dollars")
-    else:
-        print(f"Your total bill is {total_bill} dollars")
-elif pizza_order == "m":
-    total_bill += 20
-    if extra_pep == "y":
-        print(f"Your total bill is ${total_bill + 3} dollars")
-    else:
-        print(f"Your total bill is {total_bill} dollars")
-elif pizza_order == "l":
-    total_bill += 25
-    if extra_pep == "y":
-        print(f"Your total bill is ${total_bill + 3} dollars")
-    else:
-        print(f"Your total bill is {total_bill} dollars")
-else:
-    print("You need to make an order please")
+    print(f"Your love score is {love_score}")
