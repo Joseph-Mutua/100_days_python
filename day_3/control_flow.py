@@ -41,19 +41,52 @@
 #     print(f"You're clinically obese")
 
 
-print("Welcome to the leap year calculator")
+# print("Welcome to the leap year calculator")
 
-year = int(input("Please type in any year to check whether it's a leap year\n"))
+# year = int(input("Please type in any year to check whether it's a leap year\n"))
 
-if year %4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("That's a leap year")
-        else:
-            print("That's not a leap year") 
-    else:
-        print("That's a leap year")
+# if year %4 == 0:
+#     if year % 100 == 0:
+#         if year % 400 == 0:
+#             print("That's a leap year")
+#         else:
+#             print("That's not a leap year")
+#     else:
+#         print("That's a leap year")
+# else:
+#     print("that's not a leap year")
+
+
+pizza_order = input(
+    "Please input your pizza order. Type s for small, m for medium and l for large pizza\n")
+extra_pep = input("Do you want pepperoni? Type y or n\n")
+total_bill = 0
+
+extra_cheese = input("Do you need extra cheese? Type y or n\n")
+
+if extra_cheese == "y":
+    total_bill += 1
 else:
-    print("that's not a leap year")                       
-    
-        
+    total_bill += 0
+
+
+if pizza_order == "s":
+    total_bill += 15
+    if extra_pep == "y":
+        print(f"Your total bill is ${total_bill + 2} dollars")
+    else:
+        print(f"Your total bill is {total_bill} dollars")
+elif pizza_order == "m":
+    total_bill += 20
+    if extra_pep == "y":
+        print(f"Your total bill is ${total_bill + 3} dollars")
+    else:
+        print(f"Your total bill is {total_bill} dollars")
+elif pizza_order == "l":
+    total_bill += 25
+    if extra_pep == "y":
+        print(f"Your total bill is ${total_bill + 3} dollars")
+    else:
+        print(f"Your total bill is {total_bill} dollars")
+else:
+    print("You need to make an order please")
