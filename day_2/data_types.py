@@ -43,7 +43,7 @@ bmi_index = int(((float(weight) / (float(height)**2))))
 
 print("your BMI index is: " + str(bmi_index))
 
-Number manipulation and F strings
+# Number manipulation and F strings
 print(round(8 / 3, 6))
 
 # Floor
