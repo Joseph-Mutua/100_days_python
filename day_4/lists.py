@@ -5,7 +5,7 @@ random_float = random.random()
 
 print(int(random_float * 2))
 
-A virtual coin toss program
+# A virtual coin toss program
 str_arr = ["Heads", "Tails"]
 random_int = int(random.random() * 2)
 
@@ -22,13 +22,13 @@ random_name = names_list[random_int]
 
 print(random_name)
 
-Using choice()
+# Using choice()
 random_name = random.choice(names_list)
 
 print(random_name)
 
 
-Index errors and working with nested lists
+# Index errors and working with nested lists
 dirty_dozen = ["Strawberries", "Spinach", "Kales",
                "Nectarines", "Apples", "Grapes",
                "Peaches", "Tomatoes", "Celery", "Potatoes"]
@@ -49,6 +49,3 @@ vertical = int(position[1])
 map[vertical -1][horizontal-1] = "X"
 
 print(f"{row1}\n{row2}\n{row3}\n")
-
-
-    
