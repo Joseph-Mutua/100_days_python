@@ -1,63 +1,9 @@
 # Step 1
-
 import random
-word_list = ["aardvark", "baboon", "camel"]
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+from hangman_words import word_list
+from hangman_art import stages
+from hangman_art import logo
+
 
 # TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 
@@ -86,8 +32,8 @@ stages = ['''
 # TODO-7 - If guess is not in chosen word, reduce the lives by 1.
 # If the lives go down to 0, then stop the game and print "You Lose!!"
 
-
 def play_game():
+    print(logo)
     lives = 6
     chosen_word = random.choice(word_list)
     print(chosen_word)
@@ -99,7 +45,7 @@ def play_game():
             guess = input("Guess any letter:\n").lower()
             if guess not in chosen_word:
                 lives -= 1
-                print("Wrong letter!")
+                print(f"Letter {guess} is not in the chosen word!")
             else:
                 for char in range(len(chosen_word)):
                     if chosen_word[char] == guess:
