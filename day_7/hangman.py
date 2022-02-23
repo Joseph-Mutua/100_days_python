@@ -14,10 +14,30 @@ print(chosen_word)
 
 guess = input("Guess any letter:\n").lower()
 
-for char in chosen_word:
-    if char == guess:
-        print("True")
-    else:
-        print("False")
+# for char in chosen_word:
+#     if char == guess:
+#         print("True")
+#     else:
+#         print("False")
     
 
+#TODO-4: - Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
+#Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3.
+# new_word = " _" * len(chosen_word)
+# print(new_word)
+
+# for char in range(0, len(chosen_word)):
+#     if chosen_word[char] == guess:
+#         new_word.replace(" _", guess)
+
+# print(new_word)
+
+new_word=[]
+
+for char in chosen_word:
+    if char == guess:
+        new_word.append(guess)
+    else:
+        new_word.append("_")
+
+print(new_word)
