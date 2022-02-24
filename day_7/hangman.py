@@ -40,12 +40,16 @@ def play_game():
     new_word = []
     new_word += "_" * len(chosen_word)
 
-    if lives > 0:
-        while "_" in new_word:
-            guess = input("Guess any letter:\n").lower()
+    # if lives > 0:
+    while "_" in new_word:
+        guess = input("Guess any letter:\n").lower()
+        if lives > 0:
             if guess not in chosen_word:
                 lives -= 1
-                print(f"Letter {guess} is not in the chosen word!")
+                print(
+                    f"Letter {guess} is not in the chosen word. You lose a life!")
+                print(stages[lives])
+                print(new_word)
             else:
                 for char in range(len(chosen_word)):
                     if chosen_word[char] == guess:
@@ -54,11 +58,13 @@ def play_game():
                         if lives < 6:
                             lives += 1
 
-            print(stages[lives])
-            print(new_word)
+                print(stages[lives])
+                print(new_word)
+        
+        else:
+            print("You've lost!")
+            break
+    if lives > 0:    
         print("You've won!")
-    else:
-        print("You've lost!")
-
 
 play_game()
