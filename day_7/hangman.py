@@ -50,6 +50,9 @@ def play_game():
                     f"Letter {guess} is not in the chosen word. You lose a life!")
                 print(stages[lives])
                 print(new_word)
+            elif guess in new_word:
+                print("The chosen letter already exists")
+                print(new_word)
             else:
                 for char in range(len(chosen_word)):
                     if chosen_word[char] == guess:
