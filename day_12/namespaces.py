@@ -25,5 +25,30 @@ def drink_potion():
     potion_strength = 20
     print(player_health)
 
-
 drink_potion()
+
+# Modifying global variables option 1
+enemies = 1
+
+
+def increase_enemies():
+    global enemies
+    enemies = 2
+    print(f"enemies inside function: {enemies}")
+
+
+increase_enemies()
+print(f"enemies outside function: {enemies}")
+
+# Modifying global variables option 2
+enemies = 1
+
+
+def increase_enemies():
+    print(f"enemies inside function: {enemies}")
+    return enemies + 1
+
+
+
+enemies = increase_enemies()
+print(f"enemies outside function: {enemies}")
