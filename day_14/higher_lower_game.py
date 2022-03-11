@@ -38,10 +38,6 @@ char_b = players[1]
 while char_a == char_b:
     char_b = generate_char()
 
-
-
-
-
 # print(logo)
 print(
 f"Compare A {char_name(char_a)}, a {char_desc(char_a)} from {char_country(char_a)}\n "
