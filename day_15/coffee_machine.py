@@ -1,6 +1,5 @@
 from menu import MENU, resources
 
-
 def check_resources(coffee):
     for ingredient, amount in coffee["ingredients"].items():
         if amount > current_resources[ingredient]:
@@ -35,6 +34,7 @@ def perform_transaction(total_cash):
 
 
 should_continue = True
+
 while should_continue:
     current_resources = resources
     coffee_type = input("What coffee would you like? espresso/latte/cappuccino: ")
